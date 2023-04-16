@@ -23,7 +23,7 @@ export default async function handler(req: NextRequest) {
   ]);
 
   const { searchParams } = req.nextUrl;
-  const domain = searchParams.get("domain") || "dub.sh";
+  const domain = searchParams.get("domain") || "hussain.fun";
   const key = searchParams.get("key") || "github";
 
   const data = await getLinkViaEdge(domain, key);

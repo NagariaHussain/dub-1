@@ -22,7 +22,7 @@ export default function StatsPage({
       meta={{
         title: `Stats for ${domain}/${_key} - Dub`,
         description: `Stats page for ${domain}/${_key}, which redirects to ${url}.`,
-        image: `https://dub.sh/api/og/stats?domain=${domain}&key=${_key}`,
+        image: `https://hussain.fun/api/og/stats?domain=${domain}&key=${_key}`,
       }}
     >
       <div className="bg-gray-50">
@@ -38,7 +38,7 @@ export const getServerSideProps: GetServerSideProps = async ({
 }) => {
   const { key } = params as { key: string };
   let domain = req.headers.host;
-  if (isHomeHostname(domain)) domain = "dub.sh";
+  if (isHomeHostname(domain)) domain = "hussain.fun";
 
   const data = await getLinkViaEdge(domain, key);
 

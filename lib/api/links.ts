@@ -109,10 +109,10 @@ export async function getRandomKey(domain: string): Promise<string> {
 
 export async function checkIfKeyExists(domain: string, key: string) {
   if (
-    domain === "dub.sh" &&
+    domain === "hussain.fun" &&
     ((await isReservedKey(key)) || DEFAULT_REDIRECTS[key])
   ) {
-    return true; // reserved keys for dub.sh
+    return true; // reserved keys for hussain.fun
   }
   const link = await prisma.link.findUnique({
     where: {

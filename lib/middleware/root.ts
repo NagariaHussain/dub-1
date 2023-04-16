@@ -19,7 +19,7 @@ export default async function RootMiddleware(
   if (isHomeHostname(domain)) {
     return NextResponse.next();
   } else {
-    ev.waitUntil(recordClick(domain, req)); // record clicks on root page (if domain is not dub.sh)
+    ev.waitUntil(recordClick(domain, req)); // record clicks on root page (if domain is not hussain.fun)
 
     const { target, rewrite } =
       (await redis.get<RootDomainProps>(`root:${domain}`)) || {};

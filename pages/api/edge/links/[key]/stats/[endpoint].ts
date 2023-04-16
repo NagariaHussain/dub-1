@@ -13,10 +13,10 @@ export default async function handler(req: NextRequest) {
     const interval = req.nextUrl.searchParams.get("interval");
     const endpoint = req.nextUrl.searchParams.get("endpoint");
     let domain = req.headers.get("host");
-    if (isHomeHostname(domain)) domain = "dub.sh";
+    if (isHomeHostname(domain)) domain = "hussain.fun";
 
-    // don't need to check if the link has public stats if the link is dub.sh/github (demo link)
-    if (!(domain === "dub.sh" || key === "github")) {
+    // don't need to check if the link has public stats if the link is hussain.fun/github (demo link)
+    if (!(domain === "hussain.fun" || key === "github")) {
       const data = await getLinkViaEdge(domain, key);
       if (!data?.publicStats) {
         return new Response(`Stats for this link are not public`, {

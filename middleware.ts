@@ -26,24 +26,24 @@ export const config = {
 
 export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
   const { domain, path, key } = parse(req);
-  const home = domain === "dub.sh";
+  const home = domain === "hussain.fun";
 
-  // for App (app.dub.sh and app.localhost:3000)
-  if (domain === "app.dub.sh" || domain === "app.localhost:3000") {
+  // for App (app.hussain.fun and app.localhost:3000)
+  if (domain === "app.hussain.fun" || domain === "app.localhost:3000") {
     return AppMiddleware(req);
   }
 
-  // for API (api.dub.sh and api.localhost:3000)
-  if (domain === "api.dub.sh" || domain === "api.localhost:3000") {
+  // for API (api.hussain.fun and api.localhost:3000)
+  if (domain === "api.hussain.fun" || domain === "api.localhost:3000") {
     return ApiMiddleware(req);
   }
 
-  // for public stats pages (e.g. dub.sh/stats/github)
+  // for public stats pages (e.g. hussain.fun/stats/github)
   if (path.startsWith("/stats/")) {
     return NextResponse.next();
   }
 
-  // for root pages (e.g. dub.sh, vercel.fyi, etc.)
+  // for root pages (e.g. hussain.fun, vercel.fyi, etc.)
   if (key.length === 0) {
     return RootMiddleware(req, ev);
   }

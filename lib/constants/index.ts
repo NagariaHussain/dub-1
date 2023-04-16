@@ -56,29 +56,29 @@ export const FADE_IN_ANIMATION_SETTINGS = {
 
 export const HOME_HOSTNAMES = new Set([
   // comment for better diffs
-  "dub.sh",
-  "preview.dub.sh",
+  "hussain.fun",
+  "preview.hussain.fun",
   "localhost:3000",
 ]);
 
 export const DEFAULT_REDIRECTS = {
-  home: "https://dub.sh",
-  signin: "https://app.dub.sh/login",
-  login: "https://app.dub.sh/login",
-  register: "https://app.dub.sh/register",
-  signup: "https://app.dub.sh/register",
-  app: "https://app.dub.sh",
-  dashboard: "https://app.dub.sh",
-  links: "https://app.dub.sh/links",
-  settings: "https://app.dub.sh/settings",
-  welcome: "https://app.dub.sh/welcome",
+  home: "https://hussain.fun",
+  signin: "https://app.hussain.fun/login",
+  login: "https://app.hussain.fun/login",
+  register: "https://app.hussain.fun/register",
+  signup: "https://app.hussain.fun/register",
+  app: "https://app.hussain.fun",
+  dashboard: "https://app.hussain.fun",
+  links: "https://app.hussain.fun/links",
+  settings: "https://app.hussain.fun/settings",
+  welcome: "https://app.hussain.fun/welcome",
   slack: "https://dub.slack.com",
   discord: "https://twitter.com/dubdotsh", // placeholder for now
 };
 
 export const REDIRECT_HEADERS = {
   headers: {
-    "x-powered-by": "Dub.sh - Link management for modern marketing teams",
+    "x-powered-by": "hussain.fun - Link management for modern marketing teams",
   },
 };
 
@@ -104,7 +104,7 @@ export const SPECIAL_APEX_DOMAINS = {
 export const DEFAULT_LINK_PROPS = {
   key: "github",
   url: "https://github.com/steven-tey/dub",
-  domain: "dub.sh",
+  domain: "hussain.fun",
   archived: false,
   expiresAt: null,
   password: null,

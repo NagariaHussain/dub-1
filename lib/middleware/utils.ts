@@ -4,7 +4,7 @@ import { HOME_HOSTNAMES } from "@/lib/constants";
 export const parse = (req: NextRequest) => {
   let domain = req.headers.get("host");
   domain = domain.replace("www.", ""); // remove www. from domain
-  if (HOME_HOSTNAMES.has(domain)) domain = "dub.sh";
+  if (HOME_HOSTNAMES.has(domain)) domain = "hussain.fun";
   const path = req.nextUrl.pathname;
   const key = decodeURIComponent(path.split("/")[1]); // to handle foreign languages like Hebrew
   return { domain, path, key };

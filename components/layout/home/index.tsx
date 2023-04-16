@@ -32,7 +32,7 @@ export default function HomeLayout({
               <Link href="/">
                 <Image
                   src="/_static/logotype.svg"
-                  alt="Dub.sh logo"
+                  alt="hussain.fun logo"
                   width={834}
                   height={236}
                   className="w-24"
@@ -46,7 +46,7 @@ export default function HomeLayout({
                   {...FADE_IN_ANIMATION_SETTINGS}
                   href={
                     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                      ? "https://app.dub.sh/login"
+                      ? "https://app.hussain.fun/login"
                       : "http://app.localhost:3000/login"
                   }
                   className="rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"
@@ -58,7 +58,7 @@ export default function HomeLayout({
                   {...FADE_IN_ANIMATION_SETTINGS}
                   href={
                     process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                      ? "https://app.dub.sh"
+                      ? "https://app.hussain.fun"
                       : "http://app.localhost:3000"
                   }
                   className="rounded-full border border-black bg-black py-1.5 px-5 text-sm text-white transition-all hover:bg-white hover:text-black"
@@ -77,7 +77,7 @@ export default function HomeLayout({
           <Twitter className="h-6 w-6 text-gray-600" />
         </a>
         <Link href="/">
-          <span className="sr-only">Dub.sh Logo</span>
+          <span className="sr-only">hussain.fun Logo</span>
           <Logo className="h-7 w-7 text-gray-600" />
         </Link>
         <a

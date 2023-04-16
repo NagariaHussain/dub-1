@@ -12,7 +12,7 @@ export default withUserAuth(
         interval: IntervalProps;
       };
       const response = await getStats({
-        domain: "dub.sh",
+        domain: "hussain.fun",
         key,
         endpoint,
         interval,

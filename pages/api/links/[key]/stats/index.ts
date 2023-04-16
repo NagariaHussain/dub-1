@@ -13,7 +13,7 @@ export default withUserAuth(
       const link = await prisma.link.findUnique({
         where: {
           domain_key: {
-            domain: "dub.sh",
+            domain: "hussain.fun",
             key,
           },
         },
@@ -31,7 +31,7 @@ export default withUserAuth(
         where: {
           domain_key: {
             key,
-            domain: "dub.sh",
+            domain: "hussain.fun",
           },
         },
         data: {

@@ -15,7 +15,7 @@ function generateSiteMap({
          <loc>${hostname}</loc>
        </url>
        ${
-         hostname === "https://dub.sh"
+         hostname === "https://hussain.fun"
            ? `<url>
           <loc>${hostname}/metatags</loc>
         </url>
@@ -47,7 +47,7 @@ export async function getServerSideProps({
   res: NextApiResponse;
 }) {
   let domain = req.headers.host;
-  if (isHomeHostname(domain)) domain = "dub.sh";
+  if (isHomeHostname(domain)) domain = "hussain.fun";
 
   // Get top 100 links (sorted by clicks in descending order)
   const links = await prisma.link.findMany({

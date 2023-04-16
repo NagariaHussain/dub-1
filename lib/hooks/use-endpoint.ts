@@ -12,7 +12,7 @@ export default function useEndpoint(staticDomain?: string) {
   const { project: { domain: projectDomain } = {} } = useProject();
 
   const { pageType, domain, endpoint } = useMemo(() => {
-    // Project link page, e.g. app.dub.sh/dub/github
+    // Project link page, e.g. app.hussain.fun/dub/github
     if (slug && key) {
       return {
         pageType: slug,
@@ -20,16 +20,16 @@ export default function useEndpoint(staticDomain?: string) {
         endpoint: `/api/projects/${slug}/domains/${projectDomain}/links/${key}/stats`,
       };
 
-      // Generic Dub.sh link page, e.g. app.dub.sh/links/steven
+      // Generic hussain.fun link page, e.g. app.hussain.fun/links/steven
     } else if (key && router.asPath.startsWith("/links")) {
       return {
         pageType: "links",
-        domain: "dub.sh",
+        domain: "hussain.fun",
         endpoint: `/api/links/${key}/stats`,
       };
     }
 
-    // Public stats page, e.g. dub.sh/stats/github
+    // Public stats page, e.g. hussain.fun/stats/github
     return {
       pageType: "stats",
       domain: staticDomain,

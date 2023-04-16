@@ -12,17 +12,17 @@ export const config = {
   },
 };
 
-// This is a special route for retrieving and creating custom dub.sh links.
+// This is a special route for retrieving and creating custom hussain.fun links.
 export default withUserAuth(
   async (req: NextApiRequest, res: NextApiResponse, session: Session) => {
-    // GET /api/links – get all dub.sh links created by the user
+    // GET /api/links – get all hussain.fun links created by the user
     if (req.method === "GET") {
       const { status, sort } = req.query as {
         status?: string;
         sort?: "createdAt" | "clicks";
       };
       const response = await getLinksForProject({
-        domain: "dub.sh",
+        domain: "hussain.fun",
         status,
         sort,
         userId: session.user.id,
@@ -45,7 +45,7 @@ export default withUserAuth(
       }
       const response = await addLink({
         ...req.body,
-        domain: "dub.sh",
+        domain: "hussain.fun",
         userId: session.user.id,
       });
 

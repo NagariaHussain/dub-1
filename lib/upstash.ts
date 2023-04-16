@@ -28,14 +28,14 @@ export const ratelimit = (
     : null;
 };
 
-// only for dub.sh public demo
+// only for hussain.fun public demo
 export async function setRandomKey(
   url: string,
 ): Promise<{ response: string; key: string }> {
   /* recursively set link till successful */
   const key = nanoid();
   const response = await redis.set(
-    `dub.sh:${key}`,
+    `hussain.fun:${key}`,
     {
       url,
     },

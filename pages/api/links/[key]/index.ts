@@ -12,7 +12,7 @@ export const config = {
   },
 };
 
-const domain = "dub.sh";
+const domain = "hussain.fun";
 
 export default withUserAuth(
   async (req: NextApiRequest, res: NextApiResponse, session: Session) => {
