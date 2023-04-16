@@ -38,9 +38,6 @@ export const authOptions: NextAuthOptions = {
   },
   callbacks: {
     signIn: async ({ user }) => {
-      if (await isBlacklistedEmail(user.email)) {
-        return false;
-      }
       return true;
     },
     jwt: async ({ token, account }) => {
